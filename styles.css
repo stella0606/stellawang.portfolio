@@ -330,6 +330,15 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 .project-row .placeholder-shot { width: 100%; height: 150px; }
 
+.project-cover { overflow: hidden; padding: 0; }
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.project-cover.zoom img { transform: scale(1.15); }
+
 .project-index {
   font-family: var(--font-mono);
   font-size: 0.75rem;
