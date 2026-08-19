@@ -243,6 +243,10 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
    HOME — HERO
    ============================================================ */
 .hero {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
+  align-items: center;
   padding: 4.5rem 0 3rem;
 }
 
@@ -284,10 +288,12 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 .hero-media {
   display: flex;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  overflow-x: auto;
-  padding-bottom: 0.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-media { max-width: 220px; margin: 0 auto; }
 }
 
 .placeholder-shot {
@@ -305,7 +311,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   padding: 0.5rem;
 }
 
-.hero-media .placeholder-shot { width: 150px; height: 300px; }
+.hero-media .placeholder-shot { width: 100%; aspect-ratio: 4/5; }
 
 /* ============================================================
    PROJECT PREVIEW LIST (home)
