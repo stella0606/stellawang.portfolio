@@ -594,6 +594,20 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   margin: 1rem 0;
 }
 
+.wireframe-videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+.wireframe-videos video {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+}
+
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
