@@ -338,6 +338,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   object-position: center;
 }
 .project-cover.zoom img { transform: scale(1.15); }
+.project-cover.contain img { object-fit: contain; padding: 0.5rem; transform: scale(1.35); }
 
 .project-index {
   font-family: var(--font-mono);
@@ -461,6 +462,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .case-hero-media .placeholder-shot { width: 210px; height: 430px; }
 .case-hero-media img.placeholder-shot { object-fit: contain; padding: 0; background: transparent; border: none; }
+.case-hero-media img.native-shot { width: auto; height: auto; max-width: 100%; max-height: 430px; background: var(--paper-raised); border: 1px solid var(--line); }
 
 /* ============================================================
    CASE STUDY — BODY LAYOUT WITH PROCESS RAIL
