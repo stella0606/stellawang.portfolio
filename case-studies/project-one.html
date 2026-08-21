@@ -33,7 +33,7 @@
   <section class="case-hero">
     <p class="eyebrow case-eyebrow">//Cybersecurity platform</p>
     <h1 class="case-title">Trend AI Agentic Platform</h1>
-    <p class="case-subtitle">Designing a motion system to bring clarity and interactivity to Trend Micro's autonomous cybersecurity platform, Agentic.</p>
+    <p class="case-subtitle">Designing a motion system to bring clarity and interactivity to Trend AI's autonomous cybersecurity platform, Agentic.</p>
 
     <dl class="meta-grid">
       <div>
@@ -42,7 +42,7 @@
       </div>
       <div>
         <dt>Tools</dt>
-        <dd>Figma, Claude design, VSCode</dd>
+        <dd>Figma, Claude design, VSCode, GitHub</dd>
       </div>
       <div>
         <dt>Role</dt>
@@ -50,9 +50,9 @@
       </div>
     </dl>
 
-    <div class="case-hero-media" aria-hidden="true">
-      <div class="placeholder-shot">Hero mockup 1</div>
-      <div class="placeholder-shot">Hero mockup 2</div>
+    <div class="case-hero-media bleed" aria-hidden="true">
+      <img class="placeholder-shot native-shot wide-shot" src="../images/project-one-hero-1.png" alt="Agentic dashboard with priority alerts and the TrendAI Companion panel open">
+      <img class="placeholder-shot native-shot wide-shot" src="../images/project-one-hero-2.png" alt="Agentic proxy block issue detail with autonomous summary and the TrendAI Companion panel open">
     </div>
   </section>
 
@@ -73,7 +73,7 @@
       <section id="overview" class="case-section">
         <h2>Project Overview</h2>
         <p>
-          As part of my internship at Trend Micro, I defined and created a
+          As part of my internship at Trend AI, I defined and created a
           motion design system for their cybersecurity platform, Agentic.
           Agentic is an artificial intelligence system designed to
           autonomously perform security information and event management
@@ -112,6 +112,77 @@
         <div class="takeaway-grid">
           <div class="takeaway-card">Lacks guidance on how to navigate between pages. Users often don't know what's clickable on a given page.</div>
           <div class="takeaway-card">Users easily overlook important updates or data, since nothing visually stands out to indicate what they should pay attention to first.</div>
+        </div>
+
+        <h3>Competitive Analysis</h3>
+        <p>
+          Before designing a motion system for Agentic, I researched three
+          widely used systems: Material 3 (Google), Carbon (IBM), and
+          Atlassian's design system. Material 3 emphasizes expressiveness,
+          using motion to add personality and delight, while Carbon and
+          Atlassian prioritize productivity and clarity. Since Agentic is a
+          cybersecurity platform where fast, confident decision making
+          matters most, I drew more heavily from Carbon and Atlassian, an
+          approach that also aligned closely with Agentic's existing brand
+          identity.
+        </p>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Design System</th>
+                <th>Strengths</th>
+                <th>Challenges</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Material 3</td>
+                <td>
+                  <ul class="source-list">
+                    <li>Rich, expressive motion library with springs and fluid transitions that make interactions feel polished and human.</li>
+                    <li>Backed by strong documentation and wide adoption across consumer products.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="source-list">
+                    <li>Expressive, branded motion can feel too playful or high effort for a high stakes security context.</li>
+                    <li>Emphasis on delight adds implementation overhead that isn't well suited to dense, real time dashboards.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Carbon</td>
+                <td>
+                  <ul class="source-list">
+                    <li>Ties motion directly to functional feedback such as loading states and status changes.</li>
+                    <li>Keeps animations brief and purposeful so they support rather than distract from data heavy enterprise workflows.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="source-list">
+                    <li>Utilitarian approach leaves little guidance for more expressive moments, such as onboarding or moments meant to build user trust.</li>
+                    <li>Motion language is built almost entirely around efficiency.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Atlassian</td>
+                <td>
+                  <ul class="source-list">
+                    <li>Maintains consistent motion tokens across an entire suite of products.</li>
+                    <li>Gives teams clear, well documented rules for using motion to signal hierarchy and emphasis.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="source-list">
+                    <li>Motion guidance is spread across several separate product design systems, making it harder to extract one unified specification.</li>
+                    <li>Patterns are tuned more for collaborative work tools than for real time monitoring and alerting.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -159,15 +230,44 @@
 
         <h3>User Flows</h3>
         <p>
-          Describe the core user flow(s) you mapped out and what decisions
-          they helped clarify.
+          The user flow mapped six motion touchpoints across the dashboard:
+          page entry, card hover, dropdown toggle, drawer toggle, companion
+          open, and question hover. Structuring it this way clarified which
+          interactions needed lightweight, frequent feedback (hover,
+          toggles) versus which deserved heavier, less frequent emphasis
+          (companion open, page entry), directly shaping the four-tier
+          duration scale and easing pairing rules I later defined.
         </p>
         <img class="case-img" src="../images/project-one-user-flow.png" alt="User flow diagram mapping motion interactions from entering the dashboard through page entry, card hover, dropdown toggle, drawer toggle, companion open, and question hover">
 
         <h3>Wireframes</h3>
         <p>
-          Describe your low/mid-fidelity wireframes and what you were solving
-          for at this stage.
+          My low-fi wireframes mapped each interaction as static before and
+          after states (a card at rest versus hovered, a drawer closed
+          versus open) annotated with the intended motion in words, like
+          "floats upward" or "spins and fades." No real code or animation
+          yet. At this stage I was solving for what should move and in what
+          direction, before spending any time on timing or easing.
+        </p>
+        <img class="case-img" src="../images/project-one-lofi-wireframes.png" alt="Low-fidelity wireframes showing before/after states for page entry motions, card hover, dropdown toggle, drawer toggle, companion open, and question hover">
+      </section>
+
+      <div class="stage-heading">
+        <span class="eyebrow">Stage 04</span>
+      </div>
+      <section id="prototype" class="case-section">
+        <h2>Prototype</h2>
+
+        <h3>High-Fidelity Screens</h3>
+        <p>
+          For the high-fi wireframe, I decided to build an HTML prototype
+          where motion was actually implemented on different components to
+          better visualize how each motion would play out. The most
+          important decision was building segmented toggles into the
+          prototype itself, letting me compare variants side by side (float
+          vs. glow on hover, slide vs. flip on the drawer) rather than
+          guessing which felt right, turning this stage into a testing tool
+          rather than just a visual upgrade.
         </p>
         <div class="wireframe-videos">
           <video autoplay loop muted playsinline aria-label="Typing motion wireframe">
@@ -183,27 +283,19 @@
             <source src="../videos/project-one-wireframe-drawer.mov" type="video/quicktime">
           </video>
         </div>
-      </section>
-
-      <div class="stage-heading">
-        <span class="eyebrow">Stage 04</span>
-      </div>
-      <section id="prototype" class="case-section">
-        <h2>Prototype</h2>
-
-        <h3>High-Fidelity Screens</h3>
-        <p>
-          Describe how the design evolved from wireframes to high-fidelity
-          screens, and what design decisions mattered most.
-        </p>
-        <div class="placeholder-shot" style="width:100%; height:320px; margin:1rem 0;">High-fidelity screens placeholder</div>
 
         <h3>Style Guide</h3>
         <p>
-          Describe your visual design choices — color, type, logo — and the
-          reasoning behind them.
+          Color and typography were already defined by the UX team, so my
+          focus was purely on motion. I built a four-tier duration scale (150
+          to 600ms) mapped to interaction weight, and four easing curves,
+          decelerate for entrances, accelerate for exits, standard for
+          everyday feedback, and emphasized for high-attention moments like
+          alerts. This structure keeps every animation purposeful and
+          consistent rather than arbitrary, reinforcing the motion
+          principles: purposeful, efficient, controlled, and confident.
         </p>
-        <div class="placeholder-shot" style="width:100%; height:320px; margin:1rem 0;">Style guide placeholder</div>
+        <img class="case-img" src="../images/project-one-style-guide.png" alt="Agentic Motion Design System style guide showing color palette, typography scale, motion duration and easing tokens, pairing rules, and applied examples">
       </section>
 
       <div class="stage-heading">
@@ -214,8 +306,25 @@
 
         <h3>Usability Testing</h3>
         <p>
-          Describe your usability testing goals, tasks, and what you learned
-          from participants.
+          The goal of this test was to evaluate whether the motion
+          decisions made in the high-fi prototype actually felt appropriate
+          in practice, rather than just looking right in isolated variant
+          comparisons. Participants were asked to complete a set of tasks
+          using the dashboard, including opening the AI companion and
+          typing a question into it, so I could observe their reactions to
+          motion in a realistic, task-focused context rather than while
+          explicitly evaluating animations.
+        </p>
+        <p>
+          The clearest finding came from the companion chat box. I had
+          initially implemented a continuous gradient spinning motion
+          around it, but almost all participants pointed out that the
+          constant spinning tired their eyes and made it hard to focus
+          while typing. Motion that looks appealing as a standalone demo
+          can actively work against usability once a person needs to
+          concentrate on a task, and constant, looping animation near an
+          input area is especially risky since it competes with focus
+          rather than supporting it.
         </p>
 
         <div class="before-after">
@@ -234,13 +343,20 @@
             <figcaption>After testing</figcaption>
           </figure>
         </div>
-        <p>Describe what changed and why, based on participant feedback.</p>
+        <p>
+          Based on this feedback, I replaced the continuous gradient
+          spinning motion with a single color highlight instead. This kept
+          enough visual signal to show the companion was active without the
+          constant motion competing for attention, giving participants a
+          calmer, more focused typing experience while still communicating
+          the same underlying state.
+        </p>
 
         <h3>Final Product</h3>
-        <div class="case-hero-media">
-          <div class="placeholder-shot">Final screen 1</div>
-          <div class="placeholder-shot">Final screen 2</div>
-        </div>
+        <video class="case-img" autoplay loop muted playsinline aria-label="Final product demo">
+          <source src="../videos/project-one-final-product.mp4" type="video/mp4">
+          <source src="../videos/project-one-final-product.mov" type="video/quicktime">
+        </video>
         <a class="prototype-link" href="#">View prototype →</a>
       </section>
 
